@@ -1,0 +1,23 @@
+# _config.yml
+# Archivo de configuración básico para Jekyll / GitHub Pages
+
+title: "legionarios"
+email: "ldnm92@gmail.com"
+description: "practica de paginas web"
+baseurl: "" # Dejar vacío si es página de usuario, usar "/repo-name" si es página de proyecto
+url: "https://LuisDev1992.github.io/Pagina-web---" # Cambia si tu URL es diferente
+language: "es"
+theme: minima
+plugins:
+  - jekyll-feed
+
+markdown: kramdown
+exclude:
+  - "node_modules"
+  - "vendor"
+
+# Configuración de permalinks y paginación (opcional)
+permalink: /:categories/:title/
+paginate: 5
+
+# Nota: edita los campos title, email, description y url según tus necesidades.
