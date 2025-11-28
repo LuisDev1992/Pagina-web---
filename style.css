@@ -1,49 +1,82 @@
-.header{
-    background-color: rgba(255, 0, 0, 0.918);
-    text-align: center;
-    padding: 20px;
+/* Plantilla 1: Reset y Base */
+* {
+    /* Clave: asegura que padding y border se incluyan en el ancho/alto del elemento */
+    box-sizing: border-box; 
+    margin: 0; /* Elimina márgenes por defecto del navegador */
+    padding: 0; /* Elimina rellenos por defecto */
 }
 
-.content{
-    margin: 20px;
+body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    background-color: rgb(240, 0, 48);
-    display: flex;
-    justify-content: space-around;
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-.box{
-    width: 250px;
-    /*height: 200px;*/
-    background-color: white;
-    margin: 10px;
-    padding: 20px;
-    text-align: left;
-    
-}
-
-.box h3{
-    margin-bottom: 10px;
-   margin-top: 0;
-    /*text-align: center;   */
-    color:#333;
-}
-
-.box img{
-    width: 100%;
+/* Estilos para que las imágenes sean responsivas por defecto */
+img {
+    max-width: 100%;
     height: auto;
-    /*object-fit: cover;*/
-    display: block;
-    margin: 15px 0;
+    display: block; /* Elimina espacios extra debajo de las imágenes */
 }
 
-/*.footer{
-    background-color: red;
+/* Estilos del Encabezado */
+.header {
+    background-color: #cc5500; /* Rojo vibrante */
+    color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}*/
+    padding: 30px 0;
+    margin-bottom: 20px; /* Separación del contenido principal */
+}
 
+/* Estilos del Título principal */
+h1 {
+    font-size: 2.5rem; /* Tamaño recomendado para un h1 */
+}
+
+/* Estilos del Pie de Página */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    margin-top: 30px; /* Separación del contenido principal */
+}
+
+/* Contenedor principal de las tarjetas (antes .content) */
+.tarjetas-flex-contenedor { 
+    /* Esta clase reemplaza tu .content para mayor claridad */
+    display: flex; /* Activa la alineación horizontal */
+    justify-content: space-around; /* Distribuye las tarjetas */
+    gap: 20px; /* Espacio entre cada tarjeta */
+    
+    /* Adaptación de tu antiguo .content */
+    background-color: crimson;
+    padding: 20px; 
+}
+
+/* Estilos de las cajas individuales (.box) */
+.box {
+    /* flex-basis asegura que cada caja ocupe ~1/3 del espacio disponible */
+    flex-basis: 30%; 
+    
+    /* Tu estilo anterior */
+    background-color: white;
+    padding: 20px; 
+    text-align: left; 
+    
+    /* Evita que el ancho sea menor al contenido */
+    min-width: 250px;
+}
+
+/* Estilos de los elementos de texto dentro de la caja */
+.box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 1rem;
+    margin-bottom: 15px; /* Separar el texto de la imagen */
+}
